@@ -1,0 +1,8 @@
+sentence= "Hey I am walking here I am walking here o captain my captain water water everywhere nor a drop to drink"
+s=sentence.split()
+print("sentence_list= ",s,"\n")
+
+so=set(s)
+print("sentence_set= ",so,"\n")
+
+print("num_unique: ",len(so),"\n")
