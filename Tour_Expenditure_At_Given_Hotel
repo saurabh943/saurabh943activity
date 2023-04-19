@@ -1,0 +1,32 @@
+room_type = input("Enter room type (Deluxe or Non AC): ")
+number_days = int(input("Enter total number of days: "))
+food_amount = float(input("Enter total amount spent on food: "))
+
+# Compute room tariff
+if room_type.lower() == "deluxe":
+    room_tariff = 7500 * number_days
+    tax_rate = 0.18
+elif room_type.lower() == "non ac":
+    room_tariff = 4500 * number_days
+    tax_rate = 0.05
+else:
+    print("Invalid room type entered!")
+    exit()
+
+# Compute tax on food
+cgst = food_amount * tax_rate / 2
+sgst = food_amount * tax_rate / 2
+
+# Compute tip amount
+tip_amount = food_amount * 0.1
+
+# Compute total amount
+total_foodamount = food_amount + cgst + sgst + tip_amount
+
+# Print the bill
+print("Room Tariff: {:.2f}".format(room_tariff))
+print("CGST: {:.2f}".format(cgst))
+print("SGST: {:.2f}".format(sgst))
+print("Food Amount: {:.2f}".format(food_amount))
+print("Tip Amount: {:.2f}".format(tip_amount))
+print("Total Amount for the Food: {:.2f}".format(total_foodamount))
