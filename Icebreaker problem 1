@@ -1,0 +1,23 @@
+# Get wavelength from user
+wavelength = float(input("Enter the wavelength in nanometers: "))
+
+# Determine the color based on the wavelength
+if 380 <= wavelength < 450:
+    color = "Violet"
+elif 450 <= wavelength < 495:
+    color = "Blue"
+elif 495 <= wavelength < 570:
+    color = "Green"
+elif 570 <= wavelength < 590:
+    color = "Yellow"
+elif 590 <= wavelength < 620:
+    color = "Orange"
+elif 620 <= wavelength <= 750:
+    color = "Red"
+else:
+    print("Error: Wavelength is outside of the visible spectrum.")
+    color = None
+
+# Print the color if it was determined successfully
+if color:
+    print(f"The color of the wavelength {wavelength} nm is {color}.")
